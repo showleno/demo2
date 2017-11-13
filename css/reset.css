@@ -1,0 +1,43 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#333;
+}
+/*input文本颜色*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color:#CD4B50;	
+}
+input{
+	outline: none;
+}
+html{
+	font-size: 12px;
+	font-family:"Microsoft Yahei";
+}
+body{
+	min-width:320px;
+	max-width:640px;
+	margin:0 auto;
+	background:#EDEDED;
+	padding-bottom:50px;
+	/*快速回弹滚动*/
+	-webkit-overflow-scrolling:touch;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.prl_6{
+	padding:0 6px;
+}
+.prl_8{
+	padding:0 8px;
+}

@@ -1,0 +1,24 @@
+require.config({
+	paths:{
+		"zepto":"lib/zepto",
+		"zepto.touch":"lib/zepto.touch",
+		"vue":"lib/vue",
+		"vue-router":"lib/vue-router",
+		"vue-resource":"lib/vue-resource"
+	},
+	shim:{
+		"zepto":{
+			exports:"Zepto"
+		},
+		"zepto.touch":{
+			deps:['Zepto'],
+			exports:"Zepto"
+		}
+	},
+	map:{
+		"*":{
+			"css":"lib/css"
+		}
+	}
+})
+require(["router/router","init","css!../css/reset.css"])

@@ -1,0 +1,163 @@
+{
+	"errno": 0,
+	"data": {
+		"carousel":[
+			{
+				"img": "banner_01.jpg",
+				"type":"culture",
+				"title":"回归潮流原点！YOHO!STORE潮流中心，10月3日，首站南京！"
+			},
+			{
+				"img": "banner_02.jpg",
+				"type":"news",
+				"title":"一周速报"
+			},
+			{
+				"img": "banner_03.jpg",
+				"type":"sales",
+				"title":"特别放送"
+			},
+			{
+				"img": "banner_04.jpg",
+				"type":"news",
+				"title":"成名在望"
+			},
+			{
+				"img": "banner_05.jpg",
+				"type":"sales",
+				"title":"敢不敢赌一把"
+			},
+			{
+				"img": "banner_06.jpg",
+				"type":"sales",
+				"title":"敢不敢赌一把"
+			},
+			{
+				"img": "banner_07.jpg",
+				"type":"sales",
+				"title":"敢不敢赌一把"
+			},
+			{
+				"img": "banner_08.jpg",
+				"type":"sales",
+				"title":"敢不敢赌一把"
+			}
+		],
+		"product":[
+			{
+				"url":"01.jpg",
+				"price":"839.00",
+				"num":165,
+				"id":"1",
+				"type":"clothes"
+			},
+			{
+				"url":"02.jpg",
+				"price":"198.00",
+				"num":89,
+				"id":"2",
+				"type":"clothes"
+			},
+			{
+				"url":"03.jpg",
+				"price":"149.00",
+				"num":199,
+				"id":"3",
+				"type":"clothes"
+			},
+			{
+				"url":"04.jpg",
+				"price":"599.00",
+				"num":201,
+				"id":"4",
+				"type":"clothes"
+			},
+			{
+				"url":"05.jpg",
+				"price":"169.00",
+				"num":169,
+				"id":"5",
+				"type":"clothes"
+			},
+			{
+				"url":"06.jpg",
+				"price":"479.00",
+				"num":117,
+				"id":"6",
+				"type":"clothes"
+			},
+			{
+				"url":"07.jpg",
+				"price":"359.00",
+				"num":143,
+				"id":"7",
+				"type":"clothes"
+			}
+		],
+		"list":[
+			{
+				"url":"01.jpg",
+				"text":"DC ASTOR SN M SHOE WHT 休闲运动鞋",
+				"price":"299.00",
+				"orignPrice":"595.00",
+				"onSale":"true"
+			},
+			{
+				"url":"02.jpg",
+				"text":"Levi's Pride系列 男士经典五袋款牛仔短裤",
+				"price":"699.00",
+				"onSale":"true"
+			},
+			{
+				"url":"03.jpg",
+				"text":"converse Chuck Taylor 70S 低帮休闲鞋",
+				"price":"599.00",
+				"onSale":"true"
+			},
+			{
+				"url":"04.jpg",
+				"text":"JOYRICH 男款pink brigitte教练夹克",
+				"price":"1479.00",
+				"orignPrice":"1849.00",
+				"onSale":"true"
+			},
+			{
+				"url":"05.jpg",
+				"text":"意大利原产 Android Homme OMEGA 低帮休闲鞋",
+				"price":"2350.00",
+				"onSale":"true"
+			},
+			{
+				"url":"06.jpg",
+				"text":"Herschel Supply x INDEPENDENT 收纳旅行包",
+				"price":"239.00",
+				"onSale":"true"
+			},
+			{
+				"url":"07.jpg",
+				"text":"GRNX × SANKUANZ 跨界设计 麦穗徽章印花卫衣",
+				"price":"880.00",
+				"onSale":"true"
+			},
+			{
+				"url":"08.jpg",
+				"text":"Dickies&HELLO KITTY合作款男女同款印花短袖T恤",
+				"price":"359.00",
+				"onSale":"true"
+			},
+			{
+				"url":"09.jpg",
+				"text":"MADNESS HOODIE",
+				"price":"799.00",
+				"onSale":"true"
+			},
+			{
+				"url":"10.jpg",
+				"text":"Reebok FURYLITE II IS U 经典休闲鞋",
+				"price":"399.00",
+				"orignPrice":"620.00",
+				"onSale":"false"
+			}
+		]
+	}
+}

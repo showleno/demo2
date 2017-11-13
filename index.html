@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+	<title>RealMan</title>
+	<link rel="shortcut icon" href="img/favicon.ico" />
+</head>
+<body>
+	<div id="app">
+		<header class="header">
+			<div class="goBack">
+				<span @click="$router.go(-1)">&lt;</span>
+			</div>
+			<h1 class="logo">
+				<a href="#" :style="{transform:'rotateX('+num+'deg)'}">
+					<img class="front"  src="img/logo.png" alt="">
+					<img class="back"  src="img/r_logo1.png" alt="">
+				</a>
+			</h1>
+			<div class="search">
+				<span class="btnSearch"></span>
+			</div>
+		</header>
+		<nav class="nav">
+			<a v-for="(item,index) in tab" :href="item.href" :class="{'active':isActive===index}" @click="isActive=index">{{item.title}}</a>
+			<!-- <a href="#hot">人气</a>
+			<a href="#wear">搭配</a>
+			<a href="#fashion">潮品</a>
+			<a href="#video">视频</a> -->
+		</nav>
+		<router-view></router-view>
+	</div>
+	<template id="tpl_carousel">
+		<div class="main">
+			<!-- 轮播图 -->
+			<div id="carousel" class="carousel">
+				<ul class="swiper-wrapper"  @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd" :style="{transition:setTranstion,transform:setTransform, width:carousel.length * 100 +'%'}">
+					<li v-for="(item,index) in carousel" track-by="$index" :style="{width:100 / carousel.length + '%'}">
+						<!-- <transition :name='slide'> -->
+							<img :src="'img/news/'+item.img" alt="">
+						<!-- </transition> -->
+					</li>
+				</ul>
+				<ul class="circle">
+					<li v-for="circle in 8" :class="{'active':idx===circle-1}" @click="changeCircle(circle)"></li>
+				</ul>
+			</div>
+			<!-- 分类导航栏 -->
+			<div class="menu">
+				<nav v-for="item in nav">
+					<img :src="'img/'+item.url" alt="">
+					<span>{{item.text}}</span>
+				</nav>
+			</div>
+			<!-- 热门品类 -->
+			<div class="hotClass">
+				<h3>热门品类</h3>
+				<ul>
+					<li v-for="item in items"><img :src="'img/items/'+item.url" alt=""></li>
+				</ul>
+			</div>
+			<!-- 人气推荐 -->
+			<div class="popular">
+				<h3>人气推荐</h3>
+				<img src="img/top100/top100.jpg" alt="">
+				<div class="scrollList">
+					<ul>
+						<li v-for="item in product">
+							<img :src="'img/top100/'+item.url" alt="">
+							<div class="listText">
+								<span>￥{{item.price}}</span>
+								<p>{{item.num}}人</p>
+								<p>正在浏览</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 单品列表 -->
+			<div class="list">
+				<h2>你可能喜欢</h2>
+				<ul>
+					<li v-for="item in list" track-by="$index">
+						<div class="imgWrap">
+							<img :src="'img/list/'+item.url" alt="">
+							<span v-if="item.onSale == 'false'">已售罄</span>
+						</div>
+						<p>{{item.text}}</p>
+						<p>
+							<span class="price fl">￥{{item.price}}</span>
+							<span class="fr">···</span>
+							<span class="orignPrice fl" v-if="item.orignPrice">{{item.orignPrice}}</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</template>
+	<template id="hot_tpl">
+		<div class="hot_container">
+			<div class="info_list_wrap" v-for="item in info">
+				<div class="head">
+					<div class="head_img fl">
+						<img :src="'img/hot/head/'+item.headUrl" alt="">
+					</div>
+					<span class="type fr">{{item.type}}</span>
+					<h3>{{item.name}}</h3>
+				</div> 
+				<div class="send_img">
+					<img :src="'img/hot/'+item.sendUrl" alt="">
+				</div>
+				<div class="info_title_bottom">
+					<h3 class="title">{{item.title}}</h3>
+					<p class="sub_title">{{item.subtitle}}</p>
+					<p class="tip">
+						<span>{{item.view}}</span>
+						<span class="like">{{item.like}}</span>
+					</p>
+					
+				</div>
+
+			</div>
+		</div>
+	</template>
+	<script type="text/javascript" src="js/lib/require.js" data-main="js/app.js"></script>
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
